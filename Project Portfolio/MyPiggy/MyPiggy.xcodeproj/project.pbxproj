@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8547AD929346303007D2242 /* SelectGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8547AD829346303007D2242 /* SelectGoalViewController.swift */; };
+		F8704C6029344E1D0043396A /* LandingHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8704C5F29344E1D0043396A /* LandingHomeViewController.swift */; };
 		F8EB3844292DD90E00BC5534 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB3843292DD90E00BC5534 /* AppDelegate.swift */; };
 		F8EB3846292DD90E00BC5534 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB3845292DD90E00BC5534 /* SceneDelegate.swift */; };
 		F8EB3848292DD90E00BC5534 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB3847292DD90E00BC5534 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F8547AD829346303007D2242 /* SelectGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGoalViewController.swift; sourceTree = "<group>"; };
+		F8704C5F29344E1D0043396A /* LandingHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingHomeViewController.swift; sourceTree = "<group>"; };
 		F8EB3840292DD90E00BC5534 /* MyPiggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPiggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8EB3843292DD90E00BC5534 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8EB3845292DD90E00BC5534 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 				F8EB3843292DD90E00BC5534 /* AppDelegate.swift */,
 				F8EB3845292DD90E00BC5534 /* SceneDelegate.swift */,
 				F8EB3847292DD90E00BC5534 /* ViewController.swift */,
+				F8704C5F29344E1D0043396A /* LandingHomeViewController.swift */,
+				F8547AD829346303007D2242 /* SelectGoalViewController.swift */,
 				F8EB3849292DD90E00BC5534 /* Main.storyboard */,
 				F8EB384F292DD91000BC5534 /* Assets.xcassets */,
 				F8EB3851292DD91000BC5534 /* LaunchScreen.storyboard */,
@@ -143,6 +149,8 @@
 			files = (
 				F8EB3848292DD90E00BC5534 /* ViewController.swift in Sources */,
 				F8EB3844292DD90E00BC5534 /* AppDelegate.swift in Sources */,
+				F8704C6029344E1D0043396A /* LandingHomeViewController.swift in Sources */,
+				F8547AD929346303007D2242 /* SelectGoalViewController.swift in Sources */,
 				F8EB384E292DD90E00BC5534 /* MyPiggy.xcdatamodeld in Sources */,
 				F8EB3846292DD90E00BC5534 /* SceneDelegate.swift in Sources */,
 			);
