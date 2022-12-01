@@ -100,22 +100,23 @@ class SignUpViewController: UIViewController {
                         }
                         else
                         {
-                            showAlert(withTitle: "", Message: "Account created successfully", controller: self)
-                            self.successfulSignIn = true
+//                            showAlert(withTitle: "", Message: "Account created successfully", controller: self)
+//                            self.successfulSignIn = true
                             
                             
-//                            let Alert = UIAlertController(title: "", message: "Account created successfully", preferredStyle: .alert)  <-- KEEP TRYING!!!!!!
-//
-//                            let ok = UIAlertAction(title: "OK", style: .default, handler: { _ in
-//                                let SB = UIStoryboard(name: "Main", bundle: nil)
-//                                let vc = SB.instantiateViewController(withIdentifier: "LandingHomeViewController")
-//                                vc.modalPresentationStyle = .overFullScreen
-//                                self.present(vc, animated: true)
-//
-//                           })
-//                            Alert.addAction(ok)
-//
-//                            self.present(Alert, animated: true)
+                            let userCreatedAlert = UIAlertController(title: "", message: "Account created successfully", preferredStyle: .alert)  //<-- KEEP TRYING!!!!!!
+
+                            let ok = UIAlertAction(title: "OK", style: .default, handler: { _ in
+                                let SB = UIStoryboard(name: "Main", bundle: nil)
+                                let vc = SB.instantiateViewController(withIdentifier: "LandingHomeViewController")
+                                vc.modalPresentationStyle = .overFullScreen
+                                self.present(vc, animated: true)
+
+                           })
+                            
+                            userCreatedAlert.addAction(ok)
+
+                            self.present(userCreatedAlert, animated: true)
                             
                            
                         }
