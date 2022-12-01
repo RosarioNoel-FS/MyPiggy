@@ -13,6 +13,7 @@
 		F8547ADB29354FD6007D2242 /* GoalSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8547ADA29354FD6007D2242 /* GoalSelectionViewController.swift */; };
 		F8704C6029344E1D0043396A /* LandingHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8704C5F29344E1D0043396A /* LandingHomeViewController.swift */; };
 		F88AF4782936852F0067A0CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F88AF4772936852F0067A0CE /* GoogleService-Info.plist */; };
+		F8BFC8432939422700D0981C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BFC8422939422600D0981C /* SignInViewController.swift */; };
 		F8EB3844292DD90E00BC5534 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB3843292DD90E00BC5534 /* AppDelegate.swift */; };
 		F8EB3846292DD90E00BC5534 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB3845292DD90E00BC5534 /* SceneDelegate.swift */; };
 		F8EB3848292DD90E00BC5534 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB3847292DD90E00BC5534 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 		F8547ADA29354FD6007D2242 /* GoalSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSelectionViewController.swift; sourceTree = "<group>"; };
 		F8704C5F29344E1D0043396A /* LandingHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingHomeViewController.swift; sourceTree = "<group>"; };
 		F88AF4772936852F0067A0CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F8BFC8422939422600D0981C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		F8EB3840292DD90E00BC5534 /* MyPiggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPiggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8EB3843292DD90E00BC5534 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8EB3845292DD90E00BC5534 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				F88AF4772936852F0067A0CE /* GoogleService-Info.plist */,
 				F8704C5F29344E1D0043396A /* LandingHomeViewController.swift */,
 				F8EB3849292DD90E00BC5534 /* Main.storyboard */,
+				F8BFC8422939422600D0981C /* SignInViewController.swift */,
 				F813C6542936F04300B1F58D /* SignUpViewController.swift */,
 				F813C6562936F48300B1F58D /* Alert.swift */,
 				F8547ADA29354FD6007D2242 /* GoalSelectionViewController.swift */,
@@ -230,6 +233,7 @@
 				F8EB3848292DD90E00BC5534 /* ViewController.swift in Sources */,
 				F8EB3844292DD90E00BC5534 /* AppDelegate.swift in Sources */,
 				F8704C6029344E1D0043396A /* LandingHomeViewController.swift in Sources */,
+				F8BFC8432939422700D0981C /* SignInViewController.swift in Sources */,
 				F8EB384E292DD90E00BC5534 /* MyPiggy.xcdatamodeld in Sources */,
 				F813C6572936F48300B1F58D /* Alert.swift in Sources */,
 				F8EB3846292DD90E00BC5534 /* SceneDelegate.swift in Sources */,
