@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F8547AD929346303007D2242 /* SelectGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8547AD829346303007D2242 /* SelectGoalViewController.swift */; };
+		8B4F2E788033F10561475FB0 /* Pods_MyPiggy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED88D7E728B87E1D727B3747 /* Pods_MyPiggy.framework */; };
+		F813C6552936F04300B1F58D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813C6542936F04300B1F58D /* SignUpViewController.swift */; };
+		F813C6572936F48300B1F58D /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813C6562936F48300B1F58D /* Alert.swift */; };
+		F8547ADB29354FD6007D2242 /* GoalSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8547ADA29354FD6007D2242 /* GoalSelectionViewController.swift */; };
 		F8704C6029344E1D0043396A /* LandingHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8704C5F29344E1D0043396A /* LandingHomeViewController.swift */; };
+		F88AF4782936852F0067A0CE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F88AF4772936852F0067A0CE /* GoogleService-Info.plist */; };
 		F8EB3844292DD90E00BC5534 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB3843292DD90E00BC5534 /* AppDelegate.swift */; };
 		F8EB3846292DD90E00BC5534 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB3845292DD90E00BC5534 /* SceneDelegate.swift */; };
 		F8EB3848292DD90E00BC5534 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB3847292DD90E00BC5534 /* ViewController.swift */; };
@@ -19,8 +23,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F8547AD829346303007D2242 /* SelectGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGoalViewController.swift; sourceTree = "<group>"; };
+		2A6079E3D1689D1E975C6012 /* Pods-MyPiggy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPiggy.release.xcconfig"; path = "Target Support Files/Pods-MyPiggy/Pods-MyPiggy.release.xcconfig"; sourceTree = "<group>"; };
+		DA176CB72494D3BEC829E0E1 /* Pods-MyPiggy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPiggy.debug.xcconfig"; path = "Target Support Files/Pods-MyPiggy/Pods-MyPiggy.debug.xcconfig"; sourceTree = "<group>"; };
+		ED88D7E728B87E1D727B3747 /* Pods_MyPiggy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPiggy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F813C6542936F04300B1F58D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		F813C6562936F48300B1F58D /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		F8547ADA29354FD6007D2242 /* GoalSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSelectionViewController.swift; sourceTree = "<group>"; };
 		F8704C5F29344E1D0043396A /* LandingHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingHomeViewController.swift; sourceTree = "<group>"; };
+		F88AF4772936852F0067A0CE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F8EB3840292DD90E00BC5534 /* MyPiggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPiggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8EB3843292DD90E00BC5534 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8EB3845292DD90E00BC5534 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,17 +47,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B4F2E788033F10561475FB0 /* Pods_MyPiggy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4423AA0224A72B9B1A4A16D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DA176CB72494D3BEC829E0E1 /* Pods-MyPiggy.debug.xcconfig */,
+				2A6079E3D1689D1E975C6012 /* Pods-MyPiggy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		56B17313D4931211097A7E34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED88D7E728B87E1D727B3747 /* Pods_MyPiggy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F8EB3837292DD90E00BC5534 = {
 			isa = PBXGroup;
 			children = (
 				F8EB3842292DD90E00BC5534 /* MyPiggy */,
 				F8EB3841292DD90E00BC5534 /* Products */,
+				4423AA0224A72B9B1A4A16D7 /* Pods */,
+				56B17313D4931211097A7E34 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,9 +95,12 @@
 				F8EB3843292DD90E00BC5534 /* AppDelegate.swift */,
 				F8EB3845292DD90E00BC5534 /* SceneDelegate.swift */,
 				F8EB3847292DD90E00BC5534 /* ViewController.swift */,
+				F88AF4772936852F0067A0CE /* GoogleService-Info.plist */,
 				F8704C5F29344E1D0043396A /* LandingHomeViewController.swift */,
-				F8547AD829346303007D2242 /* SelectGoalViewController.swift */,
 				F8EB3849292DD90E00BC5534 /* Main.storyboard */,
+				F813C6542936F04300B1F58D /* SignUpViewController.swift */,
+				F813C6562936F48300B1F58D /* Alert.swift */,
+				F8547ADA29354FD6007D2242 /* GoalSelectionViewController.swift */,
 				F8EB384F292DD91000BC5534 /* Assets.xcassets */,
 				F8EB3851292DD91000BC5534 /* LaunchScreen.storyboard */,
 				F8EB3854292DD91000BC5534 /* Info.plist */,
@@ -83,9 +116,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8EB3857292DD91000BC5534 /* Build configuration list for PBXNativeTarget "MyPiggy" */;
 			buildPhases = (
+				E1919A3E2D3C3091DC62506E /* [CP] Check Pods Manifest.lock */,
 				F8EB383C292DD90E00BC5534 /* Sources */,
 				F8EB383D292DD90E00BC5534 /* Frameworks */,
 				F8EB383E292DD90E00BC5534 /* Resources */,
+				1671FB91FA7A54651BD458C9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F8EB3853292DD91000BC5534 /* LaunchScreen.storyboard in Resources */,
+				F88AF4782936852F0067A0CE /* GoogleService-Info.plist in Resources */,
 				F8EB3850292DD91000BC5534 /* Assets.xcassets in Resources */,
 				F8EB384B292DD90E00BC5534 /* Main.storyboard in Resources */,
 			);
@@ -142,16 +178,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1671FB91FA7A54651BD458C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyPiggy/Pods-MyPiggy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyPiggy/Pods-MyPiggy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyPiggy/Pods-MyPiggy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1919A3E2D3C3091DC62506E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyPiggy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F8EB383C292DD90E00BC5534 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8547ADB29354FD6007D2242 /* GoalSelectionViewController.swift in Sources */,
+				F813C6552936F04300B1F58D /* SignUpViewController.swift in Sources */,
 				F8EB3848292DD90E00BC5534 /* ViewController.swift in Sources */,
 				F8EB3844292DD90E00BC5534 /* AppDelegate.swift in Sources */,
 				F8704C6029344E1D0043396A /* LandingHomeViewController.swift in Sources */,
-				F8547AD929346303007D2242 /* SelectGoalViewController.swift in Sources */,
 				F8EB384E292DD90E00BC5534 /* MyPiggy.xcdatamodeld in Sources */,
+				F813C6572936F48300B1F58D /* Alert.swift in Sources */,
 				F8EB3846292DD90E00BC5534 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +374,7 @@
 		};
 		F8EB3858292DD91000BC5534 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA176CB72494D3BEC829E0E1 /* Pods-MyPiggy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -321,6 +402,7 @@
 		};
 		F8EB3859292DD91000BC5534 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A6079E3D1689D1E975C6012 /* Pods-MyPiggy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
