@@ -9,6 +9,8 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 
+var hasAGoal = false
+
 class SignInViewController: UIViewController {
 
     @IBOutlet weak var emailTF: UITextField!
@@ -57,8 +59,44 @@ class SignInViewController: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
                 if let error = error {
                     showAlert(withTitle: "Error", Message: "\(error.localizedDescription)", controller: self)
-                } else {
-                    showAlert(withTitle: "Success", Message: "Logged In Successfully", controller: self)
+                } else
+                {
+                    if hasAGoal
+                    {
+                        ////showAlert(withTitle: "Success", Message: "Logged In Successfully", controller: self)
+                        let userCreatedAlert = UIAlertController(title: "", message: "Logged In successfully", preferredStyle: .alert)  //<-- KEEP TRYING!!!!!!
+
+                        let ok = UIAlertAction(title: "OK", style: .default, handler: { _ in
+                            let SB = UIStoryboard(name: "Main", bundle: nil)
+                            let vc = SB.instantiateViewController(withIdentifier: "LandingHomeViewController")
+                            vc.modalPresentationStyle = .overFullScreen
+                            self.present(vc, animated: true)
+
+                       })
+                        
+                        userCreatedAlert.addAction(ok)
+
+                        self.present(userCreatedAlert, animated: true)
+                        
+                    }
+                    else
+                    {
+                        //showAlert(withTitle: "Success", Message: "Logged In Successfully", controller: self)
+                        let userCreatedAlert = UIAlertController(title: "", message: "Logged In successfully", preferredStyle: .alert)  //<-- KEEP TRYING!!!!!!
+
+                        let ok = UIAlertAction(title: "OK", style: .default, handler: { _ in
+                            let SB = UIStoryboard(name: "Main", bundle: nil)
+                            let vc = SB.instantiateViewController(withIdentifier: "LandingHomeViewController")
+                            vc.modalPresentationStyle = .overFullScreen
+                            self.present(vc, animated: true)
+
+                       })
+                        
+                        userCreatedAlert.addAction(ok)
+
+                        self.present(userCreatedAlert, animated: true)
+                    }
+                    
                 }
             }
         }

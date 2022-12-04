@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseFirestore
+import FirebaseDatabase
 
 class SignUpViewController: UIViewController {
 
@@ -83,14 +84,27 @@ class SignUpViewController: UIViewController {
             loadingIndicator.startAnimating()
             loadingIndicator.isHidden = false
             
+            
             Auth.auth().createUser(withEmail: email, password: password) { result, error in
+                //create user is a method of fire base which is responsable for creating a user and it also retrns a completion handler/ function
+                //that function is result and error
+                //if the creation is succesful then the result parameter will have a user object and that user object is a reference to the user which we created
+                //if it failed then  the error object will have a value
+                
+                //if there is a value in the user
                 if let user = result?.user {
                     //Account Created
-                    let db = Firestore.firestore()
-                    db.collection("Users").document("\(user.uid)").setData([
+                    //create reference to the firebase database
+                    let ref = Database.database().reference()
+                    //create hiarchy
+                    //
+                    let dataobj = [
                         "username": name,
-                        "email": email
-                    ]) { err in
+                        "email": email,
+                        "goals": "Car"
+                        
+                    ]
+                    ref.child("Users").child(user.uid).setValue(dataobj) { err, ref in
                         
                         self.loadingIndicator.stopAnimating()
                         self.loadingIndicator.isHidden = true
@@ -100,29 +114,27 @@ class SignUpViewController: UIViewController {
                         }
                         else
                         {
-//                            showAlert(withTitle: "", Message: "Account created successfully", controller: self)
-//                            self.successfulSignIn = true
+                            //                            showAlert(withTitle: "", Message: "Account created successfully", controller: self)
+                            //                            self.successfulSignIn = true
                             
+                            //alert the user that acount was created then nav to the next screen
+                            let userCreatedAlert = UIAlertController(title: "", message: "Logged In successfully", preferredStyle: .alert)  //<-- KEEP TRYING!!!!!!
                             
-                            let userCreatedAlert = UIAlertController(title: "", message: "Account created successfully", preferredStyle: .alert)  //<-- KEEP TRYING!!!!!!
-
                             let ok = UIAlertAction(title: "OK", style: .default, handler: { _ in
                                 let SB = UIStoryboard(name: "Main", bundle: nil)
                                 let vc = SB.instantiateViewController(withIdentifier: "LandingHomeViewController")
                                 vc.modalPresentationStyle = .overFullScreen
                                 self.present(vc, animated: true)
-
-                           })
+                                
+                            })
                             
                             userCreatedAlert.addAction(ok)
-
+                            
                             self.present(userCreatedAlert, animated: true)
                             
-                           
                         }
-                    }
-                    
-                }
+                        
+                    }}
                 else
                 {
                     showAlert(withTitle: "", Message: error?.localizedDescription ?? "Server Error", controller: self)
