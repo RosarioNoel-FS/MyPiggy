@@ -25,46 +25,31 @@ class BasicGoalViewController: UIViewController {
 
     @IBAction func createPiggyBankTapped(_ sender: Any)
     {
-       if isValidData()
-        {
-           let ref = Database.database().reference()
-           
-           let userID = Auth.auth().currentUser?.uid ?? ""
-           
-           let newRef = ref.child("Users").child(userID).child("goals").childByAutoId()
-           
-           newRef.setValue([
-            "goalName" : goalNameTF.text!,
-            "key" : newRef.key
-           ]){ err, ref in
-               
-               if let error = err {
-                   showAlert(withTitle: "", Message: error.localizedDescription, controller: self)
-               }
-               else
-               {
-                   //                            showAlert(withTitle: "", Message: "Account created successfully", controller: self)
-                   //                            self.successfulSignIn = true
-                   
-                   //alert the user that acount was created then nav to the next screen
-                   let goalCreatedAlert = UIAlertController(title: "", message: "Goal was created successfully!", preferredStyle: .alert)
-                   
-                   let ok = UIAlertAction(title: "OK", style: .default, handler: { _ in
-                       let SB = UIStoryboard(name: "Main", bundle: nil)
-                       let vc = SB.instantiateViewController(withIdentifier: "LandingHomeViewController")
-                       vc.modalPresentationStyle = .overFullScreen
-                       self.present(vc, animated: true)
-                       
-                   })
-                   
-goalCreatedAlert.addAction(ok)
-                   
-                   self.present(goalCreatedAlert, animated: true)
-                   
-               }
-               
-           }}
+        if isValidData()
+         {
+            let ref = Database.database().reference()
+            let userID = Auth.auth().currentUser?.uid ?? ""
+            let newRef = ref.child("Users").child(userID).child("goals").childByAutoId()
+            
+            newRef.setValue([
+             "goalName" : goalNameTF.text!,
+             "key" : newRef.key,
+             "isBroken": false,
+             "type": "Basic",
+             "amountCollected": "0.0"
+            ]){ err, ref in
+                
+                if let error = err {
+                    showAlert(withTitle: "", Message: error.localizedDescription, controller: self)
+                }
+                else
+                {
 
+                    NotificationCenter.default.post(name: Notification.Name("updateGoals"), object: nil, userInfo: [:])
+                    self.presentingViewController?.presentingViewController?.dismiss(animated: true)
+                }
+                
+            }}
            
         
         

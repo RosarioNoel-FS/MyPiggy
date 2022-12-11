@@ -11,6 +11,9 @@
 		F813C6552936F04300B1F58D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813C6542936F04300B1F58D /* SignUpViewController.swift */; };
 		F813C6572936F48300B1F58D /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813C6562936F48300B1F58D /* Alert.swift */; };
 		F83343182945272200F968E0 /* GoalEditAndHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83343172945272200F968E0 /* GoalEditAndHistoryViewController.swift */; };
+		F833431C2946459600F968E0 /* GoalListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833431B2946459600F968E0 /* GoalListCell.swift */; };
+		F833431E294657FC00F968E0 /* BreakPiggyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833431D294657FC00F968E0 /* BreakPiggyViewController.swift */; };
+		F833432029465B7D00F968E0 /* WithdrawAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833431F29465B7D00F968E0 /* WithdrawAmountViewController.swift */; };
 		F8547ADB29354FD6007D2242 /* GoalSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8547ADA29354FD6007D2242 /* GoalSelectionViewController.swift */; };
 		F85F927529399B32007031A1 /* HomeGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85F927429399B32007031A1 /* HomeGoalViewController.swift */; };
 		F8704C6029344E1D0043396A /* LandingHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8704C5F29344E1D0043396A /* LandingHomeViewController.swift */; };
@@ -35,6 +38,9 @@
 		F813C6542936F04300B1F58D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F813C6562936F48300B1F58D /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		F83343172945272200F968E0 /* GoalEditAndHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalEditAndHistoryViewController.swift; sourceTree = "<group>"; };
+		F833431B2946459600F968E0 /* GoalListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalListCell.swift; sourceTree = "<group>"; };
+		F833431D294657FC00F968E0 /* BreakPiggyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakPiggyViewController.swift; sourceTree = "<group>"; };
+		F833431F29465B7D00F968E0 /* WithdrawAmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawAmountViewController.swift; sourceTree = "<group>"; };
 		F8547ADA29354FD6007D2242 /* GoalSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSelectionViewController.swift; sourceTree = "<group>"; };
 		F85F927429399B32007031A1 /* HomeGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGoalViewController.swift; sourceTree = "<group>"; };
 		F8704C5F29344E1D0043396A /* LandingHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingHomeViewController.swift; sourceTree = "<group>"; };
@@ -104,21 +110,24 @@
 		F8EB3842292DD90E00BC5534 /* MyPiggy */ = {
 			isa = PBXGroup;
 			children = (
+				F88AF4772936852F0067A0CE /* GoogleService-Info.plist */,
 				F8EB3843292DD90E00BC5534 /* AppDelegate.swift */,
 				F8EB3845292DD90E00BC5534 /* SceneDelegate.swift */,
 				F8EB3847292DD90E00BC5534 /* ViewController.swift */,
-				F88AF4772936852F0067A0CE /* GoogleService-Info.plist */,
 				F8704C5F29344E1D0043396A /* LandingHomeViewController.swift */,
+				F833431B2946459600F968E0 /* GoalListCell.swift */,
 				F8EB3849292DD90E00BC5534 /* Main.storyboard */,
 				F8961728293D2BCF00A6D87F /* CustomGoalViewController.swift */,
-				F83343172945272200F968E0 /* GoalEditAndHistoryViewController.swift */,
 				F896172A293D2FB500A6D87F /* BasicGoalViewController.swift */,
 				F8961726293A742000A6D87F /* Goal.swift */,
+				F83343172945272200F968E0 /* GoalEditAndHistoryViewController.swift */,
 				F85F927429399B32007031A1 /* HomeGoalViewController.swift */,
 				F8BFC8422939422600D0981C /* SignInViewController.swift */,
 				F813C6542936F04300B1F58D /* SignUpViewController.swift */,
 				F813C6562936F48300B1F58D /* Alert.swift */,
 				F8547ADA29354FD6007D2242 /* GoalSelectionViewController.swift */,
+				F833431D294657FC00F968E0 /* BreakPiggyViewController.swift */,
+				F833431F29465B7D00F968E0 /* WithdrawAmountViewController.swift */,
 				F8EB384F292DD91000BC5534 /* Assets.xcassets */,
 				F8EB3851292DD91000BC5534 /* LaunchScreen.storyboard */,
 				F8EB3854292DD91000BC5534 /* Info.plist */,
@@ -253,8 +262,11 @@
 				F8704C6029344E1D0043396A /* LandingHomeViewController.swift in Sources */,
 				F8961727293A742000A6D87F /* Goal.swift in Sources */,
 				F8BFC8432939422700D0981C /* SignInViewController.swift in Sources */,
+				F833431C2946459600F968E0 /* GoalListCell.swift in Sources */,
 				F8EB384E292DD90E00BC5534 /* MyPiggy.xcdatamodeld in Sources */,
 				F813C6572936F48300B1F58D /* Alert.swift in Sources */,
+				F833431E294657FC00F968E0 /* BreakPiggyViewController.swift in Sources */,
+				F833432029465B7D00F968E0 /* WithdrawAmountViewController.swift in Sources */,
 				F83343182945272200F968E0 /* GoalEditAndHistoryViewController.swift in Sources */,
 				F8EB3846292DD90E00BC5534 /* SceneDelegate.swift in Sources */,
 			);

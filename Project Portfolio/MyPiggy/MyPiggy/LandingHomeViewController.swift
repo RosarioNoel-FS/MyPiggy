@@ -9,111 +9,138 @@ import UIKit
 import FirebaseAuth
 import FirebaseFirestore
 import FirebaseDatabase
+//Noel !!!!!!!!!
 
 class LandingHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
-
+    
+    
+    
+    @IBOutlet weak var myGoalsView: UIView!
+    
+    
+    
+    @IBOutlet weak var loadingindicator: UIActivityIndicatorView!
+    var hasAGoal = false
+    
+    var goals = [Goal]()
+    
     @IBOutlet weak var goalTableView: UITableView!
     
     @IBOutlet weak var homeImage: UIImageView!
     
-    var hasAGoal = false
-    
-    
-    var goals = [Goal]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if hasAGoal
-        {
-            goalTableView.isHidden = false
-            homeImage.isHidden = true
-        }
-        else
-        {
-            goalTableView.isHidden = true
-            homeImage.isHidden = false
-        }
+        fetchgoals()
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(updateGoals),
+                                               name: Notification.Name("updateGoals"),
+                                               object: nil)
         
         
-
-        // Do any additional setup after loading the view.
-        let ref = Database.database().reference()
-        
-        let userID = Auth.auth().currentUser?.uid ?? ""
-        
-        /* refHandle = postRef.observe(DataEventType.value, with: { snapshot in
-         // ...
-       })*/
         
         
-//        ref.child("Users").child(userID).observe(.value, { (snapShot) in
-//            if let dictionary = snapShot.value as [String : Any]
-//            {
-//                let email = dictionary["email"] as String!
-//                print(email)
-//            }
-//        }) {(error) in
-        
-        let newRef = ref.child("Users").observe(.value, with: { (snapshot) in
-            if let id = snapshot.value as? [String : Any]
-            {
-
-                for child in s
-                
-                
-                
-                //                for i in id
-//                {
-//                    print("THIS ====\(i)")
-//                }
-//            }
-//            else
-//            {
-//                print("DID NOT WORK!!!!!!!!!!!!!!")
-//            }
-        })
-
-//
         
         
-        //let newRef = ref.child("Users").child(userID).child("goals").getData { error, snapshot in
-            //print("dump \(snapshot?.children.allObjects)")
-
-            //COME BACK TO THIS!
-            //            for child in snapshot!.children.allObjects as
-//            {
-//                let childsnap = snapshot?.childSnapshot(forPath: child.key)
-//                if let goalName = childsnap.value["goalName"] as? String,
-//                                   let goalKey = childsnap.value["key"] as? String {
-//                                    let goal = Goal(goalName: goalName, goalKey: goalKey)
-//                    self. goals.append(goal)
-//                    self. goalTableView.reloadData()
-            //}
-                
-            //}
-        //}
     }
     
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.goalTableView.reloadData()
+        
+        
+        
+    }
+    
+    
+    @objc func updateGoals(notification: Notification) {
+        fetchgoals()
+    }
+    // get all the goals from the user
+    private func fetchgoals() {
+        // Do any additional setup after loading the view.
+        //clear all goals
+        self.goals.removeAll()
+        loadingindicator.isHidden = false
+        loadingindicator.startAnimating()
+        // get reference to the database
+        let ref = Database.database().reference()
+        //get current user ID
+        let userID = Auth.auth().currentUser?.uid ?? ""
+        // reference to the goals
+        
+        let newRef = ref.child("Users").child(userID).child("goals").getData { error, snapshot in
+            for child in snapshot!.children.allObjects as? [DataSnapshot] ?? [] {
+                //if there is a value in the child cast as dictionary
+                if let json = child.value as? [String: Any] {
+                    //passin the dictionary of goal data into our goal obj
+                    let goal = Goal(json: json)
+                    //add the new goal to our goals array
+                    self.goals.append(goal)
+                    DispatchQueue.main.async {
+                        self.goalTableView.reloadData()
+                    }
+                }
+            }
+            
+            self.loadingindicator.stopAnimating()
+            if self.goals.count != 0
+            {
+                self.myGoalsView.isHidden = false
+                self.homeImage.isHidden = true
+            }
+            else
+            {
+                self.myGoalsView.isHidden = true
+                self.homeImage.isHidden = false
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 200
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.goals.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        //set up cell with reusable ID
+        let cell = tableView.dequeueReusableCell(withIdentifier: "goalListCell", for: indexPath) as! GoalListCell
+        cell.setData(goal: goals[indexPath.row])
+        return cell
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //
+        let goal = self.goals[indexPath.row]
+        //line 114 - 116 nav to GoalEditAndHistoryViewController
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "GoalEditAndHistoryViewController") as! GoalEditAndHistoryViewController
+        // assigning goal obj to our destination view controller
+        vc.goal = goal
+        //presenting a nav controller
+        let nav = UINavigationController(rootViewController: vc)
+        nav.setNavigationBarHidden(true, animated: true)
+        nav.modalPresentationStyle = .overFullScreen
+        self.present(nav, animated: true)
     }
-    */
-
+    
+    @IBAction func openPlusAction(_ sender: UIButton) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "GoalSelectionViewController")
+        let nav = UINavigationController(rootViewController: vc)
+        nav.setNavigationBarHidden(true, animated: true)
+        nav.modalPresentationStyle = .overFullScreen
+        self.present(nav, animated: true)
+    }
+    
 }
+
