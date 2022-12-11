@@ -10,6 +10,7 @@
 		8B4F2E788033F10561475FB0 /* Pods_MyPiggy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED88D7E728B87E1D727B3747 /* Pods_MyPiggy.framework */; };
 		F813C6552936F04300B1F58D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813C6542936F04300B1F58D /* SignUpViewController.swift */; };
 		F813C6572936F48300B1F58D /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813C6562936F48300B1F58D /* Alert.swift */; };
+		F83343182945272200F968E0 /* GoalEditAndHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83343172945272200F968E0 /* GoalEditAndHistoryViewController.swift */; };
 		F8547ADB29354FD6007D2242 /* GoalSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8547ADA29354FD6007D2242 /* GoalSelectionViewController.swift */; };
 		F85F927529399B32007031A1 /* HomeGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85F927429399B32007031A1 /* HomeGoalViewController.swift */; };
 		F8704C6029344E1D0043396A /* LandingHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8704C5F29344E1D0043396A /* LandingHomeViewController.swift */; };
@@ -33,6 +34,7 @@
 		ED88D7E728B87E1D727B3747 /* Pods_MyPiggy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPiggy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F813C6542936F04300B1F58D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F813C6562936F48300B1F58D /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		F83343172945272200F968E0 /* GoalEditAndHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalEditAndHistoryViewController.swift; sourceTree = "<group>"; };
 		F8547ADA29354FD6007D2242 /* GoalSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSelectionViewController.swift; sourceTree = "<group>"; };
 		F85F927429399B32007031A1 /* HomeGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGoalViewController.swift; sourceTree = "<group>"; };
 		F8704C5F29344E1D0043396A /* LandingHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingHomeViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				F8704C5F29344E1D0043396A /* LandingHomeViewController.swift */,
 				F8EB3849292DD90E00BC5534 /* Main.storyboard */,
 				F8961728293D2BCF00A6D87F /* CustomGoalViewController.swift */,
+				F83343172945272200F968E0 /* GoalEditAndHistoryViewController.swift */,
 				F896172A293D2FB500A6D87F /* BasicGoalViewController.swift */,
 				F8961726293A742000A6D87F /* Goal.swift */,
 				F85F927429399B32007031A1 /* HomeGoalViewController.swift */,
@@ -252,6 +255,7 @@
 				F8BFC8432939422700D0981C /* SignInViewController.swift in Sources */,
 				F8EB384E292DD90E00BC5534 /* MyPiggy.xcdatamodeld in Sources */,
 				F813C6572936F48300B1F58D /* Alert.swift in Sources */,
+				F83343182945272200F968E0 /* GoalEditAndHistoryViewController.swift in Sources */,
 				F8EB3846292DD90E00BC5534 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +411,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -435,6 +440,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

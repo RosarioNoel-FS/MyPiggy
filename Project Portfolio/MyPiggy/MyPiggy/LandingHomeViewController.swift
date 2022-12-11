@@ -18,19 +18,69 @@ class LandingHomeViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet weak var homeImage: UIImageView!
     
+    var hasAGoal = false
+    
     
     var goals = [Goal]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if hasAGoal
+        {
+            goalTableView.isHidden = false
+            homeImage.isHidden = true
+        }
+        else
+        {
+            goalTableView.isHidden = true
+            homeImage.isHidden = false
+        }
+        
+        
 
         // Do any additional setup after loading the view.
         let ref = Database.database().reference()
         
         let userID = Auth.auth().currentUser?.uid ?? ""
         
-        let newRef = ref.child("Users").child(userID).child("goals").getData { error, snapshot in
-            print("dump \(snapshot?.children.allObjects)")
+        /* refHandle = postRef.observe(DataEventType.value, with: { snapshot in
+         // ...
+       })*/
+        
+        
+//        ref.child("Users").child(userID).observe(.value, { (snapShot) in
+//            if let dictionary = snapShot.value as [String : Any]
+//            {
+//                let email = dictionary["email"] as String!
+//                print(email)
+//            }
+//        }) {(error) in
+        
+        let newRef = ref.child("Users").observe(.value, with: { (snapshot) in
+            if let id = snapshot.value as? [String : Any]
+            {
+
+                for child in s
+                
+                
+                
+                //                for i in id
+//                {
+//                    print("THIS ====\(i)")
+//                }
+//            }
+//            else
+//            {
+//                print("DID NOT WORK!!!!!!!!!!!!!!")
+//            }
+        })
+
+//
+        
+        
+        //let newRef = ref.child("Users").child(userID).child("goals").getData { error, snapshot in
+            //print("dump \(snapshot?.children.allObjects)")
 
             //COME BACK TO THIS!
             //            for child in snapshot!.children.allObjects as
@@ -44,7 +94,7 @@ class LandingHomeViewController: UIViewController, UITableViewDelegate, UITableV
             //}
                 
             //}
-        }
+        //}
     }
     
 

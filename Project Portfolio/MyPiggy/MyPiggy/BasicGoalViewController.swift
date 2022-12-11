@@ -10,6 +10,8 @@ import FirebaseAuth
 import FirebaseFirestore
 import FirebaseDatabase
 
+
+
 class BasicGoalViewController: UIViewController {
 
     @IBOutlet weak var goalNameTF: UITextField!

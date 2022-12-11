@@ -1,16 +1,14 @@
 //
-//  HomeGoalViewController.swift
+//  GoalEditAndHistoryViewController.swift
 //  MyPiggy
 //
-//  Created by Noel Rosario on 12/1/22.
+//  Created by Noel Rosario on 12/10/22.
 //
 
 import UIKit
 
-class HomeGoalViewController: UIViewController {
+class GoalEditAndHistoryViewController: UIViewController {
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

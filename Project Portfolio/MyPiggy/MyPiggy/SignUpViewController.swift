@@ -101,7 +101,6 @@ class SignUpViewController: UIViewController {
                     let dataobj = [
                         "username": name,
                         "email": email,
-                        "goals": "Car"
                         
                     ]
                     ref.child("Users").child(user.uid).setValue(dataobj) { err, ref in
