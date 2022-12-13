@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
+import FirebaseDatabase
 
 class GoalEditAndHistoryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 

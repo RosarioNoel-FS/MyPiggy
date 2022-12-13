@@ -101,6 +101,7 @@ class SignUpViewController: UIViewController {
                     let dataobj = [
                         "username": name,
                         "email": email,
+                        "goals": "Car"
                         
                     ]
                     ref.child("Users").child(user.uid).setValue(dataobj) { err, ref in
@@ -113,11 +114,8 @@ class SignUpViewController: UIViewController {
                         }
                         else
                         {
-                            //                            showAlert(withTitle: "", Message: "Account created successfully", controller: self)
-                            //                            self.successfulSignIn = true
-                            
                             //alert the user that acount was created then nav to the next screen
-                            let userCreatedAlert = UIAlertController(title: "", message: "Logged In successfully", preferredStyle: .alert)  //<-- KEEP TRYING!!!!!!
+                            let userCreatedAlert = UIAlertController(title: "", message: "Account created successfully", preferredStyle: .alert)  //<-- KEEP TRYING!!!!!!
                             
                             let ok = UIAlertAction(title: "OK", style: .default, handler: { _ in
                                 let SB = UIStoryboard(name: "Main", bundle: nil)

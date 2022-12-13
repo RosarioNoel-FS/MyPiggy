@@ -14,6 +14,7 @@
 		F833431C2946459600F968E0 /* GoalListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833431B2946459600F968E0 /* GoalListCell.swift */; };
 		F833431E294657FC00F968E0 /* BreakPiggyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833431D294657FC00F968E0 /* BreakPiggyViewController.swift */; };
 		F833432029465B7D00F968E0 /* WithdrawAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F833431F29465B7D00F968E0 /* WithdrawAmountViewController.swift */; };
+		F83343222946827700F968E0 /* WithdrawHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83343212946827700F968E0 /* WithdrawHistoryCell.swift */; };
 		F8547ADB29354FD6007D2242 /* GoalSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8547ADA29354FD6007D2242 /* GoalSelectionViewController.swift */; };
 		F85F927529399B32007031A1 /* HomeGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F85F927429399B32007031A1 /* HomeGoalViewController.swift */; };
 		F8704C6029344E1D0043396A /* LandingHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8704C5F29344E1D0043396A /* LandingHomeViewController.swift */; };
@@ -41,6 +42,7 @@
 		F833431B2946459600F968E0 /* GoalListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalListCell.swift; sourceTree = "<group>"; };
 		F833431D294657FC00F968E0 /* BreakPiggyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakPiggyViewController.swift; sourceTree = "<group>"; };
 		F833431F29465B7D00F968E0 /* WithdrawAmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawAmountViewController.swift; sourceTree = "<group>"; };
+		F83343212946827700F968E0 /* WithdrawHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawHistoryCell.swift; sourceTree = "<group>"; };
 		F8547ADA29354FD6007D2242 /* GoalSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalSelectionViewController.swift; sourceTree = "<group>"; };
 		F85F927429399B32007031A1 /* HomeGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGoalViewController.swift; sourceTree = "<group>"; };
 		F8704C5F29344E1D0043396A /* LandingHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingHomeViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				F896172A293D2FB500A6D87F /* BasicGoalViewController.swift */,
 				F8961726293A742000A6D87F /* Goal.swift */,
 				F83343172945272200F968E0 /* GoalEditAndHistoryViewController.swift */,
+				F83343212946827700F968E0 /* WithdrawHistoryCell.swift */,
 				F85F927429399B32007031A1 /* HomeGoalViewController.swift */,
 				F8BFC8422939422600D0981C /* SignInViewController.swift */,
 				F813C6542936F04300B1F58D /* SignUpViewController.swift */,
@@ -258,6 +261,7 @@
 				F813C6552936F04300B1F58D /* SignUpViewController.swift in Sources */,
 				F8EB3848292DD90E00BC5534 /* ViewController.swift in Sources */,
 				F896172B293D2FB500A6D87F /* BasicGoalViewController.swift in Sources */,
+				F83343222946827700F968E0 /* WithdrawHistoryCell.swift in Sources */,
 				F8EB3844292DD90E00BC5534 /* AppDelegate.swift in Sources */,
 				F8704C6029344E1D0043396A /* LandingHomeViewController.swift in Sources */,
 				F8961727293A742000A6D87F /* Goal.swift in Sources */,

@@ -40,5 +40,8 @@ class GoalSelectionViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func backToHomeButton(_ sender: UIButton) {
+        self.dismiss(animated: true)
+    }
 
 }

@@ -22,16 +22,20 @@ class LandingHomeViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     @IBOutlet weak var loadingindicator: UIActivityIndicatorView!
-    var hasAGoal = false
     
-    var goals = [Goal]()
     
     @IBOutlet weak var goalTableView: UITableView!
     
     @IBOutlet weak var homeImage: UIImageView!
     
+    var hasAGoal = false
+    
+    var goals = [Goal]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        goalTableView.dataSource = self
+        goalTableView.delegate = self
         
         fetchgoals()
         
@@ -47,14 +51,18 @@ class LandingHomeViewController: UIViewController, UITableViewDelegate, UITableV
         
     }
     
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//
+//        self.goalTableView.reloadData()
+        
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         self.goalTableView.reloadData()
-        
-        
-        
     }
+        
+    
     
     
     @objc func updateGoals(notification: Notification) {
@@ -100,7 +108,7 @@ class LandingHomeViewController: UIViewController, UITableViewDelegate, UITableV
             }
         }
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }
