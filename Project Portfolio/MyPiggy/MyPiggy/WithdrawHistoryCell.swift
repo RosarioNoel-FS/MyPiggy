@@ -31,7 +31,7 @@ class WithdrawHistoryCell: UITableViewCell {
         remainingbalancelabel.text = "$" + history.totalBalance
         if history.isWithdrawl
         {
-            withdrawamountLabel.textColor = UIColor(red: 255, green: 0, blue: 153, alpha: 1)
+            withdrawamountLabel.textColor = .red
         }
     }
 

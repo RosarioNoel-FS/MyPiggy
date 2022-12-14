@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
+import FirebaseDatabase
 
 class GoalSelectionViewController: UIViewController {
     //Both Goal Buttons
@@ -43,5 +46,19 @@ class GoalSelectionViewController: UIViewController {
     @IBAction func backToHomeButton(_ sender: UIButton) {
         self.dismiss(animated: true)
     }
-
+   
+    @IBAction func signOut(_ sender: UIButton)
+    {
+        let auth = Auth.auth()
+        
+        do
+        {
+            try auth.signOut()
+        }
+        catch let signOutError
+        {
+            showAlert(withTitle: "Error", Message: signOutError.localizedDescription, controller: self)
+        }
+    }
+    
 }
