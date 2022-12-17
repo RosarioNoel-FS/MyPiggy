@@ -88,7 +88,8 @@ class LandingHomeViewController: UIViewController, UITableViewDelegate, UITableV
                     //passin the dictionary of goal data into our goal obj
                     let goal = Goal(json: json)
                     //add the new goal to our goals array
-                    self.goals.append(goal)
+                    //self.goals.append(goal) <=---------CHANGED THIS
+                    self.goals.insert(goal, at: 0) //<------New Line
                     DispatchQueue.main.async {
                         self.goalTableView.reloadData()
                     }
@@ -137,7 +138,9 @@ class LandingHomeViewController: UIViewController, UITableViewDelegate, UITableV
         let nav = UINavigationController(rootViewController: vc)
         nav.setNavigationBarHidden(true, animated: true)
         nav.modalPresentationStyle = .overFullScreen
-        self.present(nav, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
+
+        //self.present(nav, animated: true)
     }
     
     @IBAction func openPlusAction(_ sender: UIButton) {
@@ -145,9 +148,9 @@ class LandingHomeViewController: UIViewController, UITableViewDelegate, UITableV
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "GoalSelectionViewController")
         let nav = UINavigationController(rootViewController: vc)
-        nav.setNavigationBarHidden(true, animated: true)
         nav.modalPresentationStyle = .overFullScreen
-        self.present(nav, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
+        //self.present(nav, animated: true)
     }
     
 }

@@ -22,6 +22,8 @@
 		F8961727293A742000A6D87F /* Goal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8961726293A742000A6D87F /* Goal.swift */; };
 		F8961729293D2BCF00A6D87F /* CustomGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8961728293D2BCF00A6D87F /* CustomGoalViewController.swift */; };
 		F896172B293D2FB500A6D87F /* BasicGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F896172A293D2FB500A6D87F /* BasicGoalViewController.swift */; };
+		F8A5C295294CED81009E5B4E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5C294294CED81009E5B4E /* TabBarController.swift */; };
+		F8A5C297294CF282009E5B4E /* settingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5C296294CF282009E5B4E /* settingsViewController.swift */; };
 		F8BFC8432939422700D0981C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8BFC8422939422600D0981C /* SignInViewController.swift */; };
 		F8EB3844292DD90E00BC5534 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB3843292DD90E00BC5534 /* AppDelegate.swift */; };
 		F8EB3846292DD90E00BC5534 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EB3845292DD90E00BC5534 /* SceneDelegate.swift */; };
@@ -50,6 +52,8 @@
 		F8961726293A742000A6D87F /* Goal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goal.swift; sourceTree = "<group>"; };
 		F8961728293D2BCF00A6D87F /* CustomGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGoalViewController.swift; sourceTree = "<group>"; };
 		F896172A293D2FB500A6D87F /* BasicGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicGoalViewController.swift; sourceTree = "<group>"; };
+		F8A5C294294CED81009E5B4E /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		F8A5C296294CF282009E5B4E /* settingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = settingsViewController.swift; sourceTree = "<group>"; };
 		F8BFC8422939422600D0981C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		F8EB3840292DD90E00BC5534 /* MyPiggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPiggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8EB3843292DD90E00BC5534 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				F8704C5F29344E1D0043396A /* LandingHomeViewController.swift */,
 				F833431B2946459600F968E0 /* GoalListCell.swift */,
 				F8EB3849292DD90E00BC5534 /* Main.storyboard */,
+				F8A5C296294CF282009E5B4E /* settingsViewController.swift */,
+				F8A5C294294CED81009E5B4E /* TabBarController.swift */,
 				F8961728293D2BCF00A6D87F /* CustomGoalViewController.swift */,
 				F896172A293D2FB500A6D87F /* BasicGoalViewController.swift */,
 				F8961726293A742000A6D87F /* Goal.swift */,
@@ -265,10 +271,12 @@
 				F8EB3844292DD90E00BC5534 /* AppDelegate.swift in Sources */,
 				F8704C6029344E1D0043396A /* LandingHomeViewController.swift in Sources */,
 				F8961727293A742000A6D87F /* Goal.swift in Sources */,
+				F8A5C295294CED81009E5B4E /* TabBarController.swift in Sources */,
 				F8BFC8432939422700D0981C /* SignInViewController.swift in Sources */,
 				F833431C2946459600F968E0 /* GoalListCell.swift in Sources */,
 				F8EB384E292DD90E00BC5534 /* MyPiggy.xcdatamodeld in Sources */,
 				F813C6572936F48300B1F58D /* Alert.swift in Sources */,
+				F8A5C297294CF282009E5B4E /* settingsViewController.swift in Sources */,
 				F833431E294657FC00F968E0 /* BreakPiggyViewController.swift in Sources */,
 				F833432029465B7D00F968E0 /* WithdrawAmountViewController.swift in Sources */,
 				F83343182945272200F968E0 /* GoalEditAndHistoryViewController.swift in Sources */,

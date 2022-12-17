@@ -36,7 +36,8 @@ class BreakPiggyViewController: UIViewController {
             else
             {
                 NotificationCenter.default.post(name: Notification.Name("updateGoals"), object: nil, userInfo: [:])
-                self.presentingViewController?.presentingViewController?.dismiss(animated: true)
+                
+                self.dismiss(animated: true)
             }
             
         }

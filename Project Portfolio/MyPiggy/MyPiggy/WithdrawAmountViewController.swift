@@ -56,7 +56,7 @@ class WithdrawAmountViewController: UIViewController {
                         else
                         {
                             NotificationCenter.default.post(name: Notification.Name("updateGoals"), object: nil, userInfo: [:])
-                            self.presentingViewController?.presentingViewController?.dismiss(animated: true)
+                            self.dismiss(animated: true)
                         }
                         
                     }
@@ -74,6 +74,7 @@ class WithdrawAmountViewController: UIViewController {
     
     @IBAction func cancelButton(_ sender: UIButton) {
         self.dismiss(animated: true)
+        
     }
 
     /*

@@ -119,7 +119,7 @@ class SignUpViewController: UIViewController {
                             
                             let ok = UIAlertAction(title: "OK", style: .default, handler: { _ in
                                 let SB = UIStoryboard(name: "Main", bundle: nil)
-                                let vc = SB.instantiateViewController(withIdentifier: "LandingHomeViewController")
+                                let vc = SB.instantiateViewController(withIdentifier: "TabBarController")
                                 vc.modalPresentationStyle = .overFullScreen
                                 self.present(vc, animated: true)
                                 

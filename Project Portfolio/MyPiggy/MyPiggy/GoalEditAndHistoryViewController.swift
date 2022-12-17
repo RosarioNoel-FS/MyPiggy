@@ -52,35 +52,39 @@ class GoalEditAndHistoryViewController: UIViewController, UITableViewDelegate, U
     
     
     private func setdata() {
-        if let _goal = goal {
-            self.goalName.text = _goal.goalName
-            self.goalAmountSaved.text = "$" + _goal.amountCollectString
-            
-            if _goal.goalType == .basic {
-                customgoalView.isHidden = true
-                goalTypeImage.image = basicpiggyImage
-            } else {
+        DispatchQueue.main.async
+        {
+            if let _goal = self.goal {
+                self.goalName.text = _goal.goalName
+                self.goalAmountSaved.text = "$" + _goal.amountCollectString
                 
+                if _goal.goalType == .basic {
+                    self.customgoalView.isHidden = true
+                    self.goalTypeImage.image = basicpiggyImage
+                } else {
+                    
+                    
+                    self.goalTotalTargetLabel.text = "$" + _goal.goalTotal
+                    let percentage = _goal.totalAmountCollected / _goal.goalTotalAmount
+                    let precentageInDouble = percentage * 100.0
+                    self.goalpercentagelabel.text = "\(precentageInDouble)%"
+                    
+                    self.customgoalView.isHidden = false
+                    self.goalTypeImage.image = custompiggyImage
+                }
                 
-                self.goalTotalTargetLabel.text = "$" + _goal.goalTotal
-                let percentage = _goal.totalAmountCollected / _goal.goalTotalAmount
-                let precentageInDouble = percentage * 100.0
-                self.goalpercentagelabel.text = "\(precentageInDouble)%"
-                
-                customgoalView.isHidden = false
-                goalTypeImage.image = custompiggyImage
-            }
-            
-            if _goal.isBroken {
-                takefrompiggyView.isHidden = true
-                breakfrompiggyview.isHidden = true
-                enterAmonutView.isHidden = true
-                self.goalTotalTargetLabel.isHidden = true
-                self.goalpercentagelabel.isHidden = true
-                goalPercentageLabel.isHidden = true
-                goalTitleLabel.isHidden = true
-                
-            }
+                if _goal.isBroken {
+                    self.takefrompiggyView.isHidden = true
+                    self.breakfrompiggyview.isHidden = true
+                    self.enterAmonutView.isHidden = true
+                    self.goalTotalTargetLabel.isHidden = true
+                    self.goalpercentagelabel.isHidden = true
+                    self.goalPercentageLabel.isHidden = true
+                    self.goalTitleLabel.isHidden = true
+                    
+                }
+        }
+        
             
             
             
@@ -98,7 +102,8 @@ class GoalEditAndHistoryViewController: UIViewController, UITableViewDelegate, U
             for child in snapshot!.children.allObjects as? [DataSnapshot] ?? [] {
                 if let json = child.value as? [String: Any] {
                     let goal = History(json: json)
-                    self.histories.append(goal)
+                    //self.histories.append(goal)
+                    self.histories.insert(goal, at: 0)
                     DispatchQueue.main.async {
                         self.tableView.reloadData()
                     }
@@ -109,7 +114,7 @@ class GoalEditAndHistoryViewController: UIViewController, UITableViewDelegate, U
     }
     
     @IBAction func homeButtonAction(_ sender: UIButton) {
-        self.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     
@@ -158,7 +163,7 @@ class GoalEditAndHistoryViewController: UIViewController, UITableViewDelegate, U
                 else
                 {
                     NotificationCenter.default.post(name: Notification.Name("updateGoals"), object: nil, userInfo: [:])
-                    self.dismiss(animated: true)
+                    self.navigationController?.popViewController(animated: true)
                 }
                 
             }

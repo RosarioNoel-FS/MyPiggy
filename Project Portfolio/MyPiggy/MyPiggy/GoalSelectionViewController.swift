@@ -47,18 +47,6 @@ class GoalSelectionViewController: UIViewController {
         self.dismiss(animated: true)
     }
    
-    @IBAction func signOut(_ sender: UIButton)
-    {
-        let auth = Auth.auth()
-        
-        do
-        {
-            try auth.signOut()
-        }
-        catch let signOutError
-        {
-            showAlert(withTitle: "Error", Message: signOutError.localizedDescription, controller: self)
-        }
-    }
+    
     
 }

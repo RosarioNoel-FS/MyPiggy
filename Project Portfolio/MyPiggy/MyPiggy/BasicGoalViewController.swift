@@ -46,7 +46,7 @@ class BasicGoalViewController: UIViewController {
                 {
 
                     NotificationCenter.default.post(name: Notification.Name("updateGoals"), object: nil, userInfo: [:])
-                    self.presentingViewController?.presentingViewController?.dismiss(animated: true)
+                    self.navigationController?.popToRootViewController(animated: true)
                 }
                 
             }}
