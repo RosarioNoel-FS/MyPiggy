@@ -9,6 +9,7 @@ import UIKit
 
 var basicpiggyImage = UIImage(named: "basicPiggy")
 var custompiggyImage = UIImage(named: "customPig")
+var brokenPiggyImage = UIImage(named: "broken")
 
 class GoalListCell: UITableViewCell {
     
@@ -37,9 +38,13 @@ class GoalListCell: UITableViewCell {
         {
             self.goalimageview.image = basicpiggyImage
         }
-        else
+        else if goal.goalType == .custom
         {
             self.goalimageview.image = custompiggyImage
+        }
+        else 
+        {
+            self.goalimageview.image = brokenPiggyImage
         }
     }
 

@@ -11,6 +11,7 @@ import UIKit
 enum GoalType {
     case basic
     case custom
+    case broken
 }
 
 class Goal

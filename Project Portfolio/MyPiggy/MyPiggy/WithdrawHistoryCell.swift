@@ -33,6 +33,10 @@ class WithdrawHistoryCell: UITableViewCell {
         {
             withdrawamountLabel.textColor = .red
         }
+        else
+        {
+            withdrawamountLabel.textColor = .white
+        }
     }
 
 }

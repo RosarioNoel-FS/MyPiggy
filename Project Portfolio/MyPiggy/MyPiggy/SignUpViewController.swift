@@ -50,11 +50,11 @@ class SignUpViewController: UIViewController {
             return false
             
         } else if password.count < 6 {
-            showAlert(withTitle: "Error", Message: "Please should be greater than 6 characters", controller: self)
+            showAlert(withTitle: "Error", Message: "password should be greater than 6 characters", controller: self)
             return false
             
         } else if confirmPassword != password {
-            showAlert(withTitle: "Error", Message: "Passwords does not match", controller: self)
+            showAlert(withTitle: "Error", Message: "Passwords do not match", controller: self)
             return false
         }
         
@@ -141,6 +141,8 @@ class SignUpViewController: UIViewController {
             
         }
     }
+    
+   
 //    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool
 //    {
 //        if successfulSignIn == true

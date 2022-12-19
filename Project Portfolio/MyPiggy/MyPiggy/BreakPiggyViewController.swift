@@ -35,6 +35,8 @@ class BreakPiggyViewController: UIViewController {
             }
             else
             {
+                self.goal?.isBroken = true
+                
                 NotificationCenter.default.post(name: Notification.Name("updateGoals"), object: nil, userInfo: [:])
                 
                 self.dismiss(animated: true)

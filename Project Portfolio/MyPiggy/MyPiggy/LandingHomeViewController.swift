@@ -37,6 +37,10 @@ class LandingHomeViewController: UIViewController, UITableViewDelegate, UITableV
         goalTableView.dataSource = self
         goalTableView.delegate = self
         
+        //edit turns on "SELECT MODE"       || how to select multi[le cells
+        //tableView.allowsMultipleSelectionDuringEditing = true  //<-------
+        
+        
         fetchgoals()
         
         NotificationCenter.default.addObserver(self,
@@ -87,6 +91,7 @@ class LandingHomeViewController: UIViewController, UITableViewDelegate, UITableV
                 if let json = child.value as? [String: Any] {
                     //passin the dictionary of goal data into our goal obj
                     let goal = Goal(json: json)
+                    
                     //add the new goal to our goals array
                     //self.goals.append(goal) <=---------CHANGED THIS
                     self.goals.insert(goal, at: 0) //<------New Line
@@ -122,7 +127,15 @@ class LandingHomeViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //set up cell with reusable ID
         let cell = tableView.dequeueReusableCell(withIdentifier: "goalListCell", for: indexPath) as! GoalListCell
-        cell.setData(goal: goals[indexPath.row])
+        
+        if indexPath.row < goals.count
+        {
+            
+            cell.setData(goal: goals[indexPath.row])
+
+        }
+        
+        
         return cell
     }
     

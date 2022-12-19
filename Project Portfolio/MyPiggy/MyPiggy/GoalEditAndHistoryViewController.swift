@@ -42,6 +42,18 @@ class GoalEditAndHistoryViewController: UIViewController, UITableViewDelegate, U
         // Do any additional setup after loading the view.
         setdata()
         getHistories()
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(updateGoals),
+                                               name: Notification.Name("updateGoals"),
+                                               object: nil)
+    }
+    
+    
+    @objc func updateGoals(notification: Notification) {
+        getHistories()
+        getupdatedGoalOBJ()
+        setdata()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -58,22 +70,32 @@ class GoalEditAndHistoryViewController: UIViewController, UITableViewDelegate, U
                 self.goalName.text = _goal.goalName
                 self.goalAmountSaved.text = "$" + _goal.amountCollectString
                 
+                
                 if _goal.goalType == .basic {
                     self.customgoalView.isHidden = true
                     self.goalTypeImage.image = basicpiggyImage
-                } else {
+                }
+                else
+                {
                     
                     
                     self.goalTotalTargetLabel.text = "$" + _goal.goalTotal
                     let percentage = _goal.totalAmountCollected / _goal.goalTotalAmount
                     let precentageInDouble = percentage * 100.0
-                    self.goalpercentagelabel.text = "\(precentageInDouble)%"
+                    var percent = ""
+                    
+                    
+                    
+                    self.goalpercentagelabel.text = String.init(format: "%.2f", CGFloat(precentageInDouble)) + "%"
+                    //self.goalpercentagelabel.text
+
                     
                     self.customgoalView.isHidden = false
                     self.goalTypeImage.image = custompiggyImage
                 }
                 
                 if _goal.isBroken {
+                    self.goalTypeImage.image = UIImage(named: "broken")
                     self.takefrompiggyView.isHidden = true
                     self.breakfrompiggyview.isHidden = true
                     self.enterAmonutView.isHidden = true
@@ -92,8 +114,36 @@ class GoalEditAndHistoryViewController: UIViewController, UITableViewDelegate, U
         
     }
     
+    private func getupdatedGoalOBJ()
+    {
+        let ref = Database.database().reference()
+        
+        let userID = Auth.auth().currentUser?.uid ?? ""
+        
+        let newRef = ref.child("Users").child(userID).child("goals").child("\(self.goal?.goalKey ?? "")").getData { error, snapshot in
+            for child in snapshot!.children.allObjects as? [DataSnapshot] ?? [] {
+                if let json = child.value as? [String: Any] {
+                    
+                    let goal = Goal(json: json)
+                    
+                    //self.goal = goal
+                    DispatchQueue.main.async {
+                        self.setdata()
+                    }
+                    dump(goal)
+                    
+                   
+                    
+                }
+            }
+        }
+
+    }
+    
     private func getHistories() {
         // Do any additional setup after loading the view.
+        self.histories.removeAll()
+        
         let ref = Database.database().reference()
         
         let userID = Auth.auth().currentUser?.uid ?? ""
@@ -128,6 +178,7 @@ class GoalEditAndHistoryViewController: UIViewController, UITableViewDelegate, U
     @IBAction func breakPiggyButton(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "BreakPiggyViewController") as! BreakPiggyViewController
+        //get the goal from the breakPiggy VC
         vc.goal = goal
         self.present(vc, animated: true)
     }
@@ -163,12 +214,15 @@ class GoalEditAndHistoryViewController: UIViewController, UITableViewDelegate, U
                 else
                 {
                     NotificationCenter.default.post(name: Notification.Name("updateGoals"), object: nil, userInfo: [:])
-                    self.navigationController?.popViewController(animated: true)
+                    //self.navigationController?.popViewController(animated: true)
+                    self.goal?.totalAmountCollected = updatedAmount
+                    self.goal?.amountCollectString = updatedAmount.description
+                    self.setdata()
+                    self.enteramountF.text?.removeAll()
                 }
                 
             }
         }
-        
         
     }
     
@@ -185,7 +239,10 @@ class GoalEditAndHistoryViewController: UIViewController, UITableViewDelegate, U
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "historycell", for: indexPath) as! WithdrawHistoryCell
-        cell.setData(history: histories[indexPath.row])
+        if indexPath.row < histories.count
+        {
+            cell.setData(history: histories[indexPath.row])
+        }
         return cell
     }
 }

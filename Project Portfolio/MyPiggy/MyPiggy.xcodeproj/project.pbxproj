@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B4F2E788033F10561475FB0 /* Pods_MyPiggy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED88D7E728B87E1D727B3747 /* Pods_MyPiggy.framework */; };
+		F80A5E47294E3AFE00963002 /* deleteTableViewControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A5E46294E3AFE00963002 /* deleteTableViewControl.swift */; };
 		F813C6552936F04300B1F58D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813C6542936F04300B1F58D /* SignUpViewController.swift */; };
 		F813C6572936F48300B1F58D /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F813C6562936F48300B1F58D /* Alert.swift */; };
 		F83343182945272200F968E0 /* GoalEditAndHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83343172945272200F968E0 /* GoalEditAndHistoryViewController.swift */; };
@@ -38,6 +39,7 @@
 		2A6079E3D1689D1E975C6012 /* Pods-MyPiggy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPiggy.release.xcconfig"; path = "Target Support Files/Pods-MyPiggy/Pods-MyPiggy.release.xcconfig"; sourceTree = "<group>"; };
 		DA176CB72494D3BEC829E0E1 /* Pods-MyPiggy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPiggy.debug.xcconfig"; path = "Target Support Files/Pods-MyPiggy/Pods-MyPiggy.debug.xcconfig"; sourceTree = "<group>"; };
 		ED88D7E728B87E1D727B3747 /* Pods_MyPiggy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPiggy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F80A5E46294E3AFE00963002 /* deleteTableViewControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deleteTableViewControl.swift; sourceTree = "<group>"; };
 		F813C6542936F04300B1F58D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F813C6562936F48300B1F58D /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		F83343172945272200F968E0 /* GoalEditAndHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalEditAndHistoryViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				F8EB3845292DD90E00BC5534 /* SceneDelegate.swift */,
 				F8EB3847292DD90E00BC5534 /* ViewController.swift */,
 				F8704C5F29344E1D0043396A /* LandingHomeViewController.swift */,
+				F80A5E46294E3AFE00963002 /* deleteTableViewControl.swift */,
 				F833431B2946459600F968E0 /* GoalListCell.swift */,
 				F8EB3849292DD90E00BC5534 /* Main.storyboard */,
 				F8A5C296294CF282009E5B4E /* settingsViewController.swift */,
@@ -275,6 +278,7 @@
 				F8BFC8432939422700D0981C /* SignInViewController.swift in Sources */,
 				F833431C2946459600F968E0 /* GoalListCell.swift in Sources */,
 				F8EB384E292DD90E00BC5534 /* MyPiggy.xcdatamodeld in Sources */,
+				F80A5E47294E3AFE00963002 /* deleteTableViewControl.swift in Sources */,
 				F813C6572936F48300B1F58D /* Alert.swift in Sources */,
 				F8A5C297294CF282009E5B4E /* settingsViewController.swift in Sources */,
 				F833431E294657FC00F968E0 /* BreakPiggyViewController.swift in Sources */,

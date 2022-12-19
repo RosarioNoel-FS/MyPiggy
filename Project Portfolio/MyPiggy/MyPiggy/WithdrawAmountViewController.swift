@@ -55,6 +55,8 @@ class WithdrawAmountViewController: UIViewController {
                         }
                         else
                         {
+                            self.goal?.amountCollectString = updatedAmount.description
+                            self.goal?.totalAmountCollected = updatedAmount
                             NotificationCenter.default.post(name: Notification.Name("updateGoals"), object: nil, userInfo: [:])
                             self.dismiss(animated: true)
                         }
