@@ -86,7 +86,7 @@ class CustomGoalViewController: UIViewController {
             //give values to the child
             newRef.setValue([
              "goalName" : goalName,
-             "key" : newRef.key,
+             "key" : newRef.key ?? "",
              "type": "Custom",
              "isBroken": false,
              "amountCollected": "0.0",
@@ -94,7 +94,7 @@ class CustomGoalViewController: UIViewController {
              "savingType": savingType,
              "completionDate": goalCompletionDate
              
-            ]){ err, ref in
+            ] as [String : Any]){ err, ref in
                 
                 if let error = err {
                     showAlert(withTitle: "", Message: error.localizedDescription, controller: self)

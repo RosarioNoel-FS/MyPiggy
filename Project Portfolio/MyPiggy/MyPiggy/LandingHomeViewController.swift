@@ -15,6 +15,7 @@ class LandingHomeViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     
+    @IBOutlet weak var editButton: UIBarButtonItem!
     
     
     @IBOutlet weak var myGoalsView: UIView!
@@ -66,6 +67,20 @@ class LandingHomeViewController: UIViewController, UITableViewDelegate, UITableV
         self.goalTableView.reloadData()
     }
         
+    
+    @IBAction func editButtonTapped(_ sender: Any)
+    {
+        goalTableView.isEditing = !goalTableView.isEditing
+        if goalTableView.isEditing
+        {
+            editButton.title = "Cancel"
+        }
+        else
+        {
+            editButton.title = "Edit"
+        }
+    }
+    
     
     
     
